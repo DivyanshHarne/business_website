@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,600&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    /* font-family:fantasy; */
     color: #fff;
 }
 
@@ -108,4 +110,78 @@ video{
     height: 100vh;
     width:100%;
     z-index: 10;
+}
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in-1{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy, sans-serif;
+    -webkit-text-stroke: 2px #98ce59;
+    color: transparent;
+    transition: all linear 0.5s;
+}
+#scroller h4:hover{
+    color: #95c11e;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#about-us{
+    height: 40%;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: red; */
+}
+#about-us-in{
+    width: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+#about-us-in h3{
+    font-size: 54px ;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+#about-us-in p{
+    font-size: 20px ;
+    line-height: 35px;
+    word-spacing: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#about-us img {
+ height: 20vh;
+ width: 20vh;
+ border-radius: 1.5vh;
+ object-fit: cover;
 }

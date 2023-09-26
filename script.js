@@ -2,8 +2,8 @@ var arrow = document.querySelector("#cursor")
 var blurArrow  = document.querySelector("#cursor-blur")
 
 document.addEventListener("mousemove", (dets)=>{
-  arrow.style.left = dets.x+'px';
-  arrow.style.top = dets.y+'px';
+  arrow.style.left = (dets.x-10)+'px';
+  arrow.style.top = (dets.y-10)+'px';
   blurArrow.style.left = dets.x-125+'px';
   blurArrow.style.top = dets.y-125+'px';
 })
@@ -16,10 +16,10 @@ gsap.to("#nav", {
     scrollTrigger:{
         trigger: "#nav", 
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top -11%",
         end: "top -11%",
-        scrub:1,
+        scrub:2,
     }
 });
 

@@ -2,10 +2,19 @@ var arrow = document.querySelector("#cursor")
 var blurArrow  = document.querySelector("#cursor-blur")
 
 document.addEventListener("mousemove", (dets)=>{
-  arrow.style.left = (dets.x-10)+'px';
-  arrow.style.top = (dets.y-10)+'px';
+  arrow.style.left = dets.x+'px';
+  arrow.style.top = dets.y+'px';
   blurArrow.style.left = dets.x-125+'px';
   blurArrow.style.top = dets.y-125+'px';
+})
+
+var h4all = document.querySelectorAll("#nav h4");
+h4all.forEach((elem)=>{
+    elem.addEventListener("mouseenter", ()=>{
+        arrow.style.scale = 3;
+        arrow.style.border = "1px solid #fff";
+        arrow.style.backgroundColor = "transparent";
+    })
 })
 
 
@@ -19,7 +28,7 @@ gsap.to("#nav", {
         // markers: true,
         start: "top -11%",
         end: "top -11%",
-        scrub:2,
+        scrub:1,
     }
 });
 

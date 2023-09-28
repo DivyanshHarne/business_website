@@ -1,12 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,600&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,600&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    /* font-family:fantasy; */
     color: #fff;
 }
 
@@ -107,7 +105,7 @@ video{
 }
 
 #page2{
-    height: 100vh;
+    min-height: 100vh;
     width:100%;
     z-index: 10;
 }
@@ -126,7 +124,7 @@ video{
     display: inline-block;
     white-space: nowrap;
     animation-name: scroll;
-    animation-duration: 40s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -135,14 +133,13 @@ video{
     display: inline-block;
     font-size: 120px;
     font-weight: 900;
-    font-family: gilroy, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     -webkit-text-stroke: 2px #98ce59;
     color: transparent;
     transition: all linear 0.5s;
-    /* -webkit-text-stroke: 2px #ffffff; */
 }
 #scroller h4:hover{
-    color: #98ce59;
+    color: #95c11e;
 }
 @keyframes scroll {
     from{
@@ -156,9 +153,11 @@ video{
     height: 40%;
     width: 100%;
     padding: 0 80px;
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: space-around;
+    position:relative;
+    z-index: 10;
     /* background-color: red; */
 }
 #about-us-in{
@@ -185,4 +184,51 @@ video{
  width: 20vh;
  border-radius: 1.5vh;
  object-fit: cover;
+}
+#cards-container{
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    position: relative;
+    z-index:10;
+}
+.card{
+    height: 70%;
+    width: 21%;
+    background-color:aquamarine;
+    border-radius: 2vh;
+    background-size: cover;
+    background-position: center;
+}
+#card-1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card-2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card-3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#green-div{
+    height: 30vh;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right top,#B1E623, #0E9C3C)
+}
+#green-div h4{
+    width: 45%;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: #000;
+    font-weight: 900;
+}
+#green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 14%;
 }

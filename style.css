@@ -126,7 +126,7 @@ video{
     display: inline-block;
     white-space: nowrap;
     animation-name: scroll;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -139,9 +139,10 @@ video{
     -webkit-text-stroke: 2px #98ce59;
     color: transparent;
     transition: all linear 0.5s;
+    /* -webkit-text-stroke: 2px #ffffff; */
 }
 #scroller h4:hover{
-    color: #95c11e;
+    color: #98ce59;
 }
 @keyframes scroll {
     from{

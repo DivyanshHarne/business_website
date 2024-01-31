@@ -14,6 +14,15 @@ h4all.forEach((elem)=>{
         arrow.style.scale = 3;
         arrow.style.border = "1px solid #fff";
         arrow.style.backgroundColor = "transparent";
+        // arrow.style.transition = "0.5s"
+    })
+})
+var h4all = document.querySelectorAll("#nav h4");
+h4all.forEach((elem)=>{
+    elem.addEventListener("mouseleave", ()=>{
+        arrow.style.scale = 1;
+        arrow.style.border = "1px solid #95c11e";
+        arrow.style.backgroundColor = "#95c11e";
     })
 })
 
